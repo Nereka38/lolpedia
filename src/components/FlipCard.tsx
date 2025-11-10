@@ -1,7 +1,7 @@
 'use client';
 
-import { Box, Text, Image, VStack } from '@chakra-ui/react';
-import { motion, useInView } from 'framer-motion';
+import { Box, Text, Image } from '@chakra-ui/react';
+import { motion } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
 import { Champion } from '@/app/types/champions';
 import { roleIcons, roleTranslations } from '@/app/utils/roles';
@@ -18,8 +18,8 @@ export default function FlipCard({ champ }: { champ: Champion }) {
     const [flipped, setFlipped] = useState(false);
     // Referencia para animación inView
     const ref = useRef<HTMLDivElement>(null);
-    // Detecta si la tarjeta está visible en pantalla
-    const isInView = useInView(ref, { once: true });
+    // Estado para saber si la tarjeta está en vista
+    const [isInView, setIsInView] = useState(false);
     // Referencia al audio del campeón
     const audioRef = useRef<HTMLAudioElement | null>(null);
     // Hook global para sonido
@@ -69,7 +69,7 @@ export default function FlipCard({ champ }: { champ: Champion }) {
     };
 
     // Renderizado de roles del campeón
-    const renderRoles = (roles) => (
+    const renderRoles = (roles: string[]) => (
         <>
             {roles.map((role) => (
                 <Text key={role} fontSize="sm" color="gray.400">
@@ -78,6 +78,23 @@ export default function FlipCard({ champ }: { champ: Champion }) {
             ))}
         </>
     );
+
+    // Observador de intersección para animación inView
+    useEffect(() => {
+        const current = ref.current;
+        if (!current) return;
+
+        const observer = new IntersectionObserver(
+            ([entry]) => setIsInView(entry.isIntersecting),
+            { threshold: 0 }
+        );
+
+        observer.observe(current);
+
+        return () => {
+            observer.unobserve(current);
+        };
+    }, []);
 
     return (
         <>

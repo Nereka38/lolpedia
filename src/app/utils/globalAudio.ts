@@ -3,7 +3,7 @@
 // Manejo de audio para hover con desbloqueo basado en interacción del usuario
 let audio: HTMLAudioElement | null = null;
 let unlocked = false;
-let loaded = false;
+let loaded = false; // eslint-disable-line @typescript-eslint/no-unused-vars
 
 // Inicializa el audio de hover
 export function initHoverAudio(src = '/audios/VoicyLol.mp3') {
@@ -15,7 +15,7 @@ export function initHoverAudio(src = '/audios/VoicyLol.mp3') {
   audio.load();
 
   audio.addEventListener('canplaythrough', () => {
-    loaded = true;
+    loaded = true; // eslint-disable-line @typescript-eslint/no-unused-vars
     console.log('hoverAudio: canplaythrough');
   });
 
@@ -64,7 +64,7 @@ export function playHoverAudio() {
   if (!unlocked) {
     // intento seguro: intentar play y atrapar error
     audio.currentTime = 0;
-    audio.play().catch((e) => {
+    audio.play().catch(() => {
       // no desplegamos error en UI: se usará el botón de activar sonido
       // console.warn('hoverAudio play blocked', e);
     });

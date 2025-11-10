@@ -20,8 +20,8 @@ export interface Champion {
   name: string;
   title: string;
   lore: string;
+  tags: string[];
   image?: string;  // Marca la propiedad como opcional
-  // Otras propiedades si las tienes
 }
 
 // Función para obtener los audios de un campeón desde su página en la Wiki (Próximamente)

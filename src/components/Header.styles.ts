@@ -1,3 +1,4 @@
+// src/components/Header.styles.ts
 import { SystemStyleObject } from '@chakra-ui/react';
 
 export const styles: Record<string, SystemStyleObject> = {
@@ -57,13 +58,28 @@ export const styles: Record<string, SystemStyleObject> = {
     borderRadius: 'xl',
     _hover: { bg: '#A2874D', color: 'black' },
   },
-  getFilterButtonStyle: (active: boolean): SystemStyleObject => ({
-    bg: active ? '#C8AA6E' : '#1e1e1e',
-    color: active ? 'black' : 'white',
-    border: active ? '1px solid #1e1e1e' : '1px solid #C8AA6E',
-  }),
-  getDrawerButtonStyle: (active: boolean): SystemStyleObject => ({
-    bg: active ? '#C8AA6E' : '#2a2a2a',
-    color: active ? 'black' : 'white',
-  }),
+  soundButton: {
+    cursor: 'pointer',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    w: '36px',
+    h: '36px',
+    borderRadius: 'full',
+    border: '1px solid #C8AA6E',
+    color: 'white',
+    _hover: { bg: '#C8AA6E', color: 'black' },
+  },
 };
+
+// Funciones de estilo dinámico separadas
+export const getFilterButtonStyle = (active: boolean): SystemStyleObject => ({
+  bg: active ? '#C8AA6E' : '#1e1e1e',
+  color: active ? 'black' : 'white',
+  border: active ? '1px solid #1e1e1e' : '1px solid #C8AA6E',
+});
+
+export const getDrawerButtonStyle = (active: boolean): SystemStyleObject => ({
+  bg: active ? '#C8AA6E' : '#2a2a2a',
+  color: active ? 'black' : 'white',
+});

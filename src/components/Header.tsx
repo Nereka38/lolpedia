@@ -19,7 +19,7 @@ import Image from "next/image";
 import { roleIcons, roleTranslations } from '@/app/utils/roles';
 import { useRef } from "react";
 import { useSoundEnabled } from "@/app/hooks/useSoundEnabled";
-import { styles } from './Header.styles';
+import { getDrawerButtonStyle, getFilterButtonStyle, styles } from './Header.styles';
 
 // Props que recibe el Header
 interface HeaderProps {
@@ -99,7 +99,7 @@ export default function Header({ search, setSearch, tagFilter, setTagFilter, all
                     onClick={handleOpen}
                     aria-expanded={isOpen}
                     aria-controls="drawer-filters"
-                    sx={{ ...styles.filterButton, ...styles.getFilterButtonStyle(!!tagFilter) }}
+                    sx={{ ...styles.filterButton, ...getFilterButtonStyle(!!tagFilter) }}
                 >
                     {tagFilter ? `${roleIcons[tagFilter]} ${roleTranslations[tagFilter]}` : 'Filtrar por rol'}
                 </Button>
@@ -118,7 +118,7 @@ export default function Header({ search, setSearch, tagFilter, setTagFilter, all
                             <Flex direction="column" gap={3}>
                                 {/* Botón "Todos" */}
                                 <Button
-                                    sx={{ ...styles.drawerButton, ...styles.getDrawerButtonStyle(tagFilter === '') }}
+                                    sx={{ ...styles.drawerButton, ...getDrawerButtonStyle(tagFilter === '') }}
                                     onClick={() => handleFilterSelect('')}
                                     aria-pressed={tagFilter === ''}
                                 >
@@ -128,7 +128,7 @@ export default function Header({ search, setSearch, tagFilter, setTagFilter, all
                                 {allTags.map((tag) => (
                                     <Button
                                         key={tag}
-                                        sx={{ ...styles.drawerButton, ...styles.getDrawerButtonStyle(tagFilter === tag) }}
+                                        sx={{ ...styles.drawerButton, ...getDrawerButtonStyle(tagFilter === tag) }}
                                         onClick={() => handleFilterSelect(tag)}
                                         aria-pressed={tagFilter === tag}
                                     >
