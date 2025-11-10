@@ -1,4 +1,5 @@
-name = "lolpedia-worker"
+# wrangler.toml
+name = 'lolpedia'
 type = "javascript"
 account_id = "TU_ACCOUNT_ID"
 compatibility_date = "2025-11-10"
