@@ -8,14 +8,14 @@ export const styles: Record<string, SystemStyleObject> = {
     py: 4,
     px: 4,
     boxShadow: 'md',
-    align: 'center',
+    alignItems: 'center',
     justifyContent: 'space-between',
     flexDirection: { base: 'column', md: 'row' },
     gap: 4,
   },
   logoContainer: {
     direction: 'column',
-    align: 'center',
+    alignItems: 'center',
     maxW: '140px',
   },
   searchWrapper: {
