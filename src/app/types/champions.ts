@@ -7,8 +7,8 @@ export interface Champion {
   title: string;
   lore?: string;
   image?: string;
-  tags?: string[];
-  blurb?: string; 
+  tags: string[];
+  blurb?: string;
 }
 
 // Detalle extendido del campeón
