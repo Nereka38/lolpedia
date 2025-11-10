@@ -28,7 +28,7 @@ Incluye búsqueda, filtrado dinámico y animaciones visuales en un entorno moder
 | [IntersectionObserver](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) | Implementación de carga infinita |
 
 ## 🧩 Estructura del proyecto
-
+```bash
 src/
 ├── app/
 │ ├── lib/ # Funciones para obtener datos de campeones
@@ -56,6 +56,7 @@ src/
 │ ├── img/ # Fondos, bordes, logos
 │ └── fonts/ # Tipografías personalizadas
 └── README.md
+```
 
 ## ⚙️ Instalación y ejecución
 
