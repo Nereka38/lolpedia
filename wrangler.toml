@@ -6,3 +6,7 @@ compatibility_date = "2025-11-10"
 [assets]
   directory = "out"
   # aquí están los archivos exportados
+  
+routes = [
+  { pattern = "lolpedia.workers.dev", custom_domain = false }
+]
