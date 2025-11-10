@@ -4,4 +4,5 @@ account_id = "TU_ACCOUNT_ID"
 compatibility_date = "2025-11-10"
 
 [assets]
-  directory = ".next/export"  # aquí están los archivos exportados
+  directory = "out"
+  # aquí están los archivos exportados
