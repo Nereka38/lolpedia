@@ -63,7 +63,7 @@ src/
 ### 1️⃣ Clona el repositorio
 
 ```bash
-git clone https://github.com/tuusuario/lolpedia.git
+git clone https://github.com/Nereka38/lolpedia.git
 cd lolpedia
 ```
 ### 2️⃣ Instala las dependencias
@@ -90,11 +90,9 @@ npm run lint	Ejecuta el linter de TypeScript/Next.js
 
 ## 🎨 Personalización
 
-Fuentes personalizadas se encuentran en public/fonts y se cargan desde src/app/layout.tsx usando next/font/local.
-
-Colores y estilos globales definidos con Chakra UI y CSS.
-
-Fondo dinámico y estética ajustada al universo de League of Legends.
+- Fuentes personalizadas se encuentran en public/fonts y se cargan desde src/app/layout.tsx usando next/font/local.
+- Colores y estilos globales definidos con Chakra UI y CSS.
+- Fondo dinámico y estética ajustada al universo de League of Legends.
 
 ## 📸 Capturas
 
@@ -102,9 +100,9 @@ Fondo dinámico y estética ajustada al universo de League of Legends.
 
 ## 💡 Próximamente
 
-🔹 Favoritos y comparación de campeones
-🔹 Estadísticas en gráficos (Recharts o Chart.js)
-🔹 Más información de cada campeón
+- Favoritos y comparación de campeones
+- Estadísticas en gráficos (Recharts o Chart.js)
+- Más información de cada campeón
 
 ## 👤 Autor
 
