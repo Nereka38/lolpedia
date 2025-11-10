@@ -3,7 +3,6 @@
 import {
     Flex,
     Input,
-    Box,
     Button,
     Drawer,
     DrawerBody,
@@ -18,7 +17,7 @@ import { CloseIcon, SearchIcon } from "@chakra-ui/icons";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { roleIcons, roleTranslations } from '@/app/utils/roles';
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { useSoundEnabled } from "@/app/hooks/useSoundEnabled";
 import { styles } from './Header.styles';
 

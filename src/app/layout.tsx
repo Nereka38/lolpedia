@@ -1,6 +1,5 @@
 'use client';
 
-import { Provider } from "@/components/ui/provider"
 import './styles/fonts.css';
 import { ChakraProvider } from "@chakra-ui/react";
 import theme from "./styles/theme";

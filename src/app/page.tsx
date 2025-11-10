@@ -23,7 +23,7 @@ export default function Home() {
   // Estado de carga adicional
   const [loadingMore, setLoadingMore] = useState(false);
   // Estado para detectar si es escritorio
-  const [isDesktop, setIsDesktop] = useState(false);
+  const [, setIsDesktop] = useState(false);
   // Estado para montar el componente
   const [mounted, setMounted] = useState(false);
   // Referencia al loader para infinite scroll
